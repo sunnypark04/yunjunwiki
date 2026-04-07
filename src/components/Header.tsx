@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 // 나무위키 아이콘과 비슷한 아이콘들을 불러옵니다.
 import {
   FiEdit2,
@@ -28,7 +29,15 @@ const Header = () => {
           {/* 메뉴 아이템들 */}
           <div className="hidden md:flex items-center gap-5 text-gray-100">
             <MenuLink icon={FiEdit2} label="최근 변경" />
-            <MenuLink icon={FiMessageSquare} label="최근 토론" />
+
+            {/* 🌟 최근 토론 부분에 Link를 감싸서 /discuss 페이지로 연결되게 합니다! */}
+            <Link
+              href="/discuss"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <MenuLink icon={FiMessageSquare} label="최근 토론" />
+            </Link>
+
             <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors">
               <FiBriefcase className="w-4 h-4" />
               <span>특수 기능</span>
