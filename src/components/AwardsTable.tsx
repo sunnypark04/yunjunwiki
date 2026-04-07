@@ -1,3 +1,10 @@
+// 컴포넌트 내부에서 사용할 사진만 넣는 심플 컴포넌트
+const RecitalPhotoOnly = ({ src, alt }: { src: string; alt: string }) => (
+  <div className="mt-3 mb-1 w-full max-w-[180px] mx-auto overflow-hidden rounded-lg border border-gray-200 shadow-sm bg-white p-0.5">
+    <img src={src} alt={alt} className="w-full h-auto object-cover" />
+  </div>
+);
+
 // 컴포넌트로 분리된 수상경력 표
 export function AwardsTable() {
   return (
@@ -158,7 +165,7 @@ export function AwardsTable() {
             <td className="py-3 px-2 bg-white text-[#d9534f] font-bold">1위</td>
           </tr>
 
-          {/* 2023년 (새로 추가) */}
+          {/* 2023년 */}
           <tr className="bg-[#f0f5fa]">
             <td
               colSpan={4}
@@ -171,12 +178,13 @@ export function AwardsTable() {
             <td className="py-3 px-2 border-r border-[#ddd] bg-white align-middle text-gray-700 whitespace-nowrap">
               8월 22일
             </td>
-            <td className="py-3 px-2 border-r border-[#ddd] bg-white font-bold text-[#333]">
-              Jun Yun PIANO RECITAL
-              <br />
-              <span className="text-[12px] font-normal text-gray-500">
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white text-center align-middle">
+              <div className="font-bold text-[#333]">Jun Yun PIANO RECITAL</div>
+              <div className="text-[12px] font-normal text-gray-500 mb-2">
                 윤준 피아노 독주회
-              </span>
+              </div>
+              {/* 🌟 2023년 사진 추가 (캡션 삭제) */}
+              <RecitalPhotoOnly src="/image_0.png" alt="2023년 독주회 포스터" />
             </td>
             <td className="py-3 px-2 border-r border-[#ddd] bg-white text-left pl-4 text-[12px] leading-relaxed text-gray-700">
               <ul className="list-disc list-inside">
@@ -186,7 +194,7 @@ export function AwardsTable() {
                 <li>B. Smetana Piano Trio in G minor</li>
               </ul>
             </td>
-            <td className="py-3 px-2 bg-white text-[13px]">
+            <td className="py-3 px-2 bg-white text-[13px] align-middle">
               울산문화예술회관
               <br />
               소공연장
@@ -225,7 +233,7 @@ export function AwardsTable() {
             <td className="py-3 px-2 bg-white font-bold">취득</td>
           </tr>
 
-          {/* 2025년 (새로 추가) */}
+          {/* 2025년 */}
           <tr className="bg-[#f0f5fa]">
             <td
               colSpan={4}
@@ -238,8 +246,16 @@ export function AwardsTable() {
             <td className="py-3 px-2 border-r border-[#ddd] bg-white align-middle text-gray-700 whitespace-nowrap">
               11월 20일
             </td>
-            <td className="py-3 px-2 border-r border-[#ddd] bg-white font-bold text-[#333]">
-              DMA Recital II
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white text-center align-middle">
+              <div className="font-bold text-[#333]">DMA Recital II</div>
+              <div className="text-[11px] text-gray-500 mt-1 mb-2">
+                Jun Yun, Piano
+              </div>
+              {/* 🌟 2025년 사진 추가 (캡션 삭제) */}
+              <RecitalPhotoOnly
+                src="/image_1.png"
+                alt="2025년 DMA 리사이틀 프로그램 사진"
+              />
             </td>
             <td className="py-3 px-2 border-r border-[#ddd] bg-white text-left pl-4 text-[12px] leading-relaxed text-gray-700">
               <ul className="list-disc list-inside">
@@ -248,7 +264,7 @@ export function AwardsTable() {
                 <li>F. Liszt Piano Sonata in B minor, S. 178</li>
               </ul>
             </td>
-            <td className="py-3 px-2 bg-white text-[13px] text-gray-600">
+            <td className="py-3 px-2 bg-white text-[13px] text-gray-600 align-middle">
               University of Oregon
               <br />
               <span className="text-[11px]">(준이통 진원지)</span>

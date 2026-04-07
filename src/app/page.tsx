@@ -39,23 +39,53 @@ export default function YunJunWiki() {
           </span>{" "}
           |
           <span className="text-[#0275d8] hover:underline cursor-pointer">
-            피아니스트
+            <a
+              href="https://namu.wiki/w/%ED%94%BC%EC%95%84%EB%8B%88%EC%8A%A4%ED%8A%B8
+"
+              className="text-[#0275d8] hover:underline"
+            >
+              피아니스트
+            </a>
           </span>{" "}
           |
           <span className="text-[#0275d8] hover:underline cursor-pointer">
-            박사과정
+            <a
+              href="https://namu.wiki/w/%EB%B0%95%EC%82%AC
+"
+              className="text-[#0275d8] hover:underline"
+            >
+              박사과정
+            </a>
           </span>{" "}
           |
           <span className="text-[#0275d8] hover:underline cursor-pointer">
-            미국유학생
+            <a
+              href="https://namu.wiki/w/%EC%9C%A0%ED%95%99%EC%83%9D
+"
+              className="text-[#0275d8] hover:underline"
+            >
+              미국유학생
+            </a>
           </span>{" "}
           |
           <span className="text-[#0275d8] hover:underline cursor-pointer">
-            1997년 출생
+            <a
+              href="https://namu.wiki/w/1997%EB%85%84/%ED%83%84%EC%83%9D
+"
+              className="text-[#0275d8] hover:underline"
+            >
+              1997년 출생
+            </a>
           </span>{" "}
           |
           <span className="text-[#0275d8] hover:underline cursor-pointer">
-            파평 윤씨
+            <a
+              href="https://namu.wiki/w/%ED%8C%8C%ED%8F%89%20%EC%9C%A4%EC%94%A8
+"
+              className="text-[#0275d8] hover:underline"
+            >
+              파평 윤씨
+            </a>
           </span>
         </div>
 
@@ -98,9 +128,16 @@ export default function YunJunWiki() {
             onToggle={() => toggleSection("s1")}
           >
             <p>
-              대한민국의 피아니스트. 1997년생으로 현재 미국 오리건주
-              유진(Eugene) 지역을 중심으로 활동하며 박사 과정을 이수 중이다.
-              압도적인 실력과 성실함을 겸비하여 촉망받는 신예 연주자다.
+              대한민국의 피아니스트. 1997년생으로 현재 미국 오리건주{" "}
+              <a
+                href="https://namu.wiki/w/%EC%9C%A0%EC%A7%84(%EB%8F%84%EC%8B%9C)
+"
+                className="text-[#0275d8] hover:underline"
+              >
+                유진(Eugene)
+              </a>
+              지역을 중심으로 활동하며 박사 과정을 이수 중이다. 압도적인 실력과
+              성실함을 겸비하여 촉망받는 신예 연주자다.
             </p>
           </Section>
 
