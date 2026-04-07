@@ -1,5 +1,5 @@
 import React from "react";
-import { InfoRow, FnLink } from "./WikiLayout";
+import { InfoRow } from "./WikiLayout";
 
 export default function InfoBox() {
   return (
