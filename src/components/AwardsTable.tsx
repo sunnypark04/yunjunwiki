@@ -158,6 +158,41 @@ export function AwardsTable() {
             <td className="py-3 px-2 bg-white text-[#d9534f] font-bold">1위</td>
           </tr>
 
+          {/* 2023년 (새로 추가) */}
+          <tr className="bg-[#f0f5fa]">
+            <td
+              colSpan={4}
+              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+            >
+              2023년
+            </td>
+          </tr>
+          <tr className="border-b border-[#ddd]">
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white align-middle text-gray-700 whitespace-nowrap">
+              8월 22일
+            </td>
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white font-bold text-[#333]">
+              Jun Yun PIANO RECITAL
+              <br />
+              <span className="text-[12px] font-normal text-gray-500">
+                윤준 피아노 독주회
+              </span>
+            </td>
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white text-left pl-4 text-[12px] leading-relaxed text-gray-700">
+              <ul className="list-disc list-inside">
+                <li>J. S. Bach English Suite No. 2</li>
+                <li>F. Liszt Réminiscences de Norma</li>
+                <li>S. Prokofiev Toccata, Op. 11</li>
+                <li>B. Smetana Piano Trio in G minor</li>
+              </ul>
+            </td>
+            <td className="py-3 px-2 bg-white text-[13px]">
+              울산문화예술회관
+              <br />
+              소공연장
+            </td>
+          </tr>
+
           {/* 석사 재학 중 */}
           <tr className="bg-[#f0f5fa]">
             <td
@@ -188,6 +223,36 @@ export function AwardsTable() {
               David Riley 사사 / 실내악 리사이틀 2회
             </td>
             <td className="py-3 px-2 bg-white font-bold">취득</td>
+          </tr>
+
+          {/* 2025년 (새로 추가) */}
+          <tr className="bg-[#f0f5fa]">
+            <td
+              colSpan={4}
+              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+            >
+              2025년
+            </td>
+          </tr>
+          <tr className="border-b border-[#ddd]">
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white align-middle text-gray-700 whitespace-nowrap">
+              11월 20일
+            </td>
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white font-bold text-[#333]">
+              DMA Recital II
+            </td>
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white text-left pl-4 text-[12px] leading-relaxed text-gray-700">
+              <ul className="list-disc list-inside">
+                <li>J.S. Bach Capriccio in B-flat Major</li>
+                <li>L.v. Beethoven Piano Sonata No. 21</li>
+                <li>F. Liszt Piano Sonata in B minor, S. 178</li>
+              </ul>
+            </td>
+            <td className="py-3 px-2 bg-white text-[13px] text-gray-600">
+              University of Oregon
+              <br />
+              <span className="text-[11px]">(준이통 진원지)</span>
+            </td>
           </tr>
 
           {/* 2026년 */}
@@ -238,4 +303,5 @@ export function AwardsTable() {
     </div>
   );
 }
+
 export default AwardsTable;

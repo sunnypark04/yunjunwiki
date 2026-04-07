@@ -1,5 +1,5 @@
 import React from "react";
-import { InfoRow } from "./WikiLayout";
+import { InfoRow, FnLink } from "./WikiLayout";
 
 export default function InfoBox() {
   return (
@@ -8,7 +8,10 @@ export default function InfoBox() {
         <thead>
           <tr className="bg-[#00a495] text-white text-center">
             <th colSpan={2} className="py-5">
-              <span className="text-2xl font-bold">윤준</span>
+              <span className="text-2xl font-bold">
+                윤준
+                <FnLink num={1} />
+              </span>
               <br />
               <div className="mt-1 flex justify-center items-center gap-2 opacity-90 text-[12px] font-normal tracking-wide">
                 <span>JUN YUN</span>
@@ -29,7 +32,15 @@ export default function InfoBox() {
           <InfoRow label="본관" value="파평 윤씨 (坡平 尹氏)" />
           <InfoRow label="출생" value={"1997년 4월 7일 (29세)\n울산광역시"} />
           <InfoRow label="거주지" value="미국 오리건주 유진" />
-          <InfoRow label="MBTI" value="ISFP" />
+          <InfoRow
+            label="MBTI"
+            value={
+              <>
+                ISFP
+                <FnLink num={2} />
+              </>
+            }
+          />
           <InfoRow label="신체 특징" value="176cm 68kg" />
           <InfoRow
             label="학력"
@@ -42,7 +53,15 @@ export default function InfoBox() {
             value="부모님, 여동생 두명: 윤다영(1999년생), 윤예영(2002년생)"
           />
           <InfoRow label="종교" value="개신교" />
-          <InfoRow label="애견묘" value="은비, 커피" />
+          <InfoRow
+            label="애견묘"
+            value={
+              <>
+                은비, 커피
+                <FnLink num={3} />
+              </>
+            }
+          />
           <InfoRow label="별명" value="캔디맨" />
           <tr className="border-b border-[#ddd]">
             <th className="bg-[#00a495] text-white w-[100px] py-3 px-3 text-[11px] font-bold text-center">

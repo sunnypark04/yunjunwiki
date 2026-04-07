@@ -69,6 +69,26 @@ export function InfoRow({
   );
 }
 
+export function FnItem({
+  num,
+  children,
+}: {
+  num: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <div id={`fn-${num}`} className="flex items-start pt-1">
+      <a
+        href={`#fn-ref-${num}`}
+        className="text-[#0275d8] font-medium mr-2 hover:underline shrink-0"
+      >
+        [{num}]
+      </a>
+      <span className="text-gray-700">{children}</span>
+    </div>
+  );
+}
+
 export function FnLink({ num }: { num: number }) {
   return (
     <sup className="text-[11px] ml-[0.5px] align-super">

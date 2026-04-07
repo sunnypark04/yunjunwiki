@@ -54,11 +54,6 @@ export default function TableOfContents() {
             여담
           </a>
         </li>
-        <li>
-          <a href="#7" className="hover:underline">
-            관련 문서
-          </a>
-        </li>
       </ol>
     </nav>
   );
