@@ -37,7 +37,7 @@ export default function YunJunWiki() {
           <div className="text-2xl text-[#00a495]">🎹</div>
           <div>
             <p>이 문서는 피아니스트 <b>윤준</b>에 관한 문서입니다.</p>
-            <p className="text-xs text-gray-500 italic">Created by 박선이 이상아 윤예린</p>
+            <p className="text-xs text-gray-500 italic">Created by 박선이 이상아</p>
           </div>
         </div>
 
