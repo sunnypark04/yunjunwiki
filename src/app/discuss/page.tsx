@@ -166,7 +166,7 @@ export default function DiscussPage() {
             <textarea
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              placeholder="축하 메시지를 입력하세요"
+              placeholder="윤준에게 한마디"
               className="border border-[#ccc] p-2 text-sm h-20 rounded-sm outline-none focus:border-[#0275d8] resize-none"
             />
             <button
