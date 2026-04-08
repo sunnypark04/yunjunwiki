@@ -423,8 +423,7 @@ export default function YunJunWiki() {
               불리곤 했었다.
             </p>
             <p className="mb-4">
-              놀이기구를 상당히 못타는 편이라고 한다. 왜 굳이 돈주고
-              무서워지는지 이해를 못한다고 <FnLink num={14} />
+              놀이기구를 상당히 못타는 편이라고 한다. <FnLink num={14} />
             </p>
             <p className="mb-4">
               은근 잘 먹는다. 근데 음식의 기쁨은 많이 느끼지 않는 편. 살기 위해

@@ -2,8 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
-// 🌟 doc, updateDoc, deleteDoc 함수를 추가로 불러옵니다.
+import Header from "../../components/Header";
 import {
   collection,
   addDoc,
@@ -14,7 +13,7 @@ import {
   updateDoc,
   deleteDoc,
 } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { db } from "../../lib/firebase"; // 경로에 맞게 조절 (@/lib/firebase)
 
 interface Message {
   id: string;
@@ -30,12 +29,10 @@ export default function DiscussPage() {
   const [content, setContent] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  // 수정 모드 상태 관리
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editName, setEditName] = useState("");
   const [editContent, setEditContent] = useState("");
 
-  // 1. 데이터 불러오기
   const fetchMessages = async () => {
     try {
       const q = query(collection(db, "messages"), orderBy("timestamp", "desc"));
@@ -56,62 +53,88 @@ export default function DiscussPage() {
     fetchMessages();
   }, []);
 
-  // 2. 메시지 등록
+  // 🌟 [핵심 변경] 누르자마자 즉시 반영 (Optimistic Update)
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !content.trim()) return;
 
-    const newMessage = {
+    // 1. 화면에 먼저 보여줄 임시 데이터 생성
+    const optimisticMessage: Message = {
+      id: "temp-" + Date.now(), // 임시 ID
       name,
       content,
       date: new Date().toLocaleString("ko-KR"),
       timestamp: Date.now(),
     };
 
+    // 2. 화면에 즉시 띄우고 입력창 비우기 (체감속도 0.1초!)
+    setMessages((prev) => [optimisticMessage, ...prev]);
+    setName("");
+    setContent("");
+
+    // 3. 백그라운드에서 진짜 DB에 저장 시도
     try {
-      await addDoc(collection(db, "messages"), newMessage);
-      setName("");
-      setContent("");
+      await addDoc(collection(db, "messages"), {
+        name: optimisticMessage.name,
+        content: optimisticMessage.content,
+        date: optimisticMessage.date,
+        timestamp: optimisticMessage.timestamp,
+      });
+      // DB 저장이 완료되면, 완벽한 동기화를 위해 목록을 한 번 갱신해줍니다.
       fetchMessages();
     } catch (error) {
-      alert("등록 실패!");
+      console.error("DB 에러:", error);
+      alert("DB 저장에 실패했습니다. Firebase 설정을 확인해주세요!");
     }
   };
 
-  // 3. 메시지 삭제 🌟
+  // 삭제 함수
   const handleDelete = async (id: string) => {
     if (!confirm("정말 이 메시지를 삭제할까요?")) return;
 
+    // 화면에서 즉시 지우기
+    setMessages((prev) => prev.filter((msg) => msg.id !== id));
+
     try {
       await deleteDoc(doc(db, "messages", id));
-      fetchMessages(); // 목록 새로고침
     } catch (error) {
       alert("삭제 실패!");
+      fetchMessages(); // 실패하면 다시 원상복구
     }
   };
 
-  // 4. 수정 모드 진입
+  // 수정 관련 함수
   const startEdit = (msg: Message) => {
     setEditingId(msg.id);
     setEditName(msg.name);
     setEditContent(msg.content);
   };
 
-  // 5. 메시지 수정 완료 🌟
   const handleUpdate = async (id: string) => {
     if (!editName.trim() || !editContent.trim()) return;
+
+    const updatedDate = new Date().toLocaleString("ko-KR") + " (수정됨)";
+
+    // 화면 즉시 수정 반영
+    setMessages((prev) =>
+      prev.map((msg) =>
+        msg.id === id
+          ? { ...msg, name: editName, content: editContent, date: updatedDate }
+          : msg,
+      ),
+    );
+    setEditingId(null);
 
     try {
       const msgRef = doc(db, "messages", id);
       await updateDoc(msgRef, {
         name: editName,
         content: editContent,
-        date: new Date().toLocaleString("ko-KR") + " (수정됨)",
+        date: updatedDate,
       });
-      setEditingId(null);
-      fetchMessages();
     } catch (error) {
       alert("수정 실패!");
+      fetchMessages();
     }
   };
 
@@ -161,14 +184,19 @@ export default function DiscussPage() {
             현재 진행 중인 토론
           </h3>
           {isLoading ? (
-            <p className="text-center py-10 text-gray-400">불러오는 중...</p>
+            <p className="text-center py-10 text-gray-400">
+              데이터를 불러오는 중...
+            </p>
+          ) : messages.length === 0 ? (
+            <p className="text-center py-10 text-gray-400 bg-gray-50 border border-[#ddd]">
+              아직 등록된 메시지가 없습니다.
+            </p>
           ) : (
             messages.map((msg, index) => (
               <div
                 key={msg.id}
                 className="border border-[#ccc] bg-white text-[14px]"
               >
-                {/* 헤더: 이름, 날짜, 버튼 */}
                 <div className="bg-[#f5f5f5] border-b border-[#ccc] p-2 px-3 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-[#0275d8]">
@@ -178,7 +206,6 @@ export default function DiscussPage() {
                       {msg.date}
                     </span>
                   </div>
-                  {/* 수정/삭제 버튼 */}
                   <div className="flex gap-2 text-[11px]">
                     <button
                       onClick={() => startEdit(msg)}
@@ -195,7 +222,6 @@ export default function DiscussPage() {
                   </div>
                 </div>
 
-                {/* 본문: 수정 중일 때와 아닐 때 분기 */}
                 <div className="p-4">
                   {editingId === msg.id ? (
                     <div className="flex flex-col gap-2">
