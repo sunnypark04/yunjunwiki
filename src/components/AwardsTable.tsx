@@ -8,11 +8,11 @@ const RecitalPhotoOnly = ({ src, alt }: { src: string; alt: string }) => (
 // 컴포넌트로 분리된 수상경력 표
 export function AwardsTable() {
   return (
-    <div className="overflow-x-auto mt-2">
-      {/*  상단 테두리 색상을 헤더와 동일한 #00a495로 변경 */}
-      <table className="w-full text-[13.5px] border-collapse border-t-[3px] border-[#00a495] border-b-[3px] border-[#ccc]">
+    // 🌟 수정 포인트 1: 부모 컨테이너가 화면을 뚫고 나가지 못하도록 w-full max-w-full 추가
+    <div className="w-full max-w-full overflow-x-auto mt-2">
+      {/* 🌟 수정 포인트 2: 테이블에 최소 너비(min-w-[650px])를 주어 모바일 화면을 넓히지 않고 깔끔하게 가로 스크롤되도록 유도 */}
+      <table className="w-full min-w-[650px] text-[13.5px] border-collapse border-t-[3px] border-[#00a495] border-b-[3px] border-[#ccc]">
         <thead>
-          {/*  헤더 배경색을 #00a495로 완벽 일치 */}
           <tr className="bg-[#00a495] text-white">
             <th className="py-2.5 px-3 border-r border-white/30 font-bold whitespace-nowrap w-[12%]">
               연도
@@ -28,7 +28,6 @@ export function AwardsTable() {
         </thead>
         <tbody className="text-center text-gray-800">
           {/* 학부 시절 */}
-          {/* 🌟 연도 구분선 배경색과 글자색도 #00a495 톤에 맞춰 조정 */}
           <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
@@ -80,7 +79,7 @@ export function AwardsTable() {
             </td>
           </tr>
           <tr className="border-b border-[#ddd]">
-            <td className="py-3 px-2 border-r border-[#ddd] bg-white">
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white whitespace-nowrap">
               2020년
             </td>
             <td className="py-3 px-2 border-r border-[#ddd] bg-white">
@@ -102,7 +101,7 @@ export function AwardsTable() {
             </td>
           </tr>
           <tr className="border-b border-[#ddd]">
-            <td className="py-3 px-2 border-r border-[#ddd] bg-white">
+            <td className="py-3 px-2 border-r border-[#ddd] bg-white whitespace-nowrap">
               2021년
             </td>
             <td className="py-3 px-2 border-r border-[#ddd] bg-white">
@@ -126,7 +125,7 @@ export function AwardsTable() {
           <tr className="border-b border-[#ddd]">
             <td
               rowSpan={4}
-              className="py-3 px-2 border-r border-[#ddd] bg-white align-middle"
+              className="py-3 px-2 border-r border-[#ddd] bg-white align-middle whitespace-nowrap"
             >
               2022년
             </td>
@@ -284,7 +283,7 @@ export function AwardsTable() {
           <tr className="border-b border-[#ddd]">
             <td
               rowSpan={2}
-              className="py-3 px-2 border-r border-[#ddd] bg-white align-middle"
+              className="py-3 px-2 border-r border-[#ddd] bg-white align-middle whitespace-nowrap"
             >
               2026년
             </td>
@@ -313,7 +312,9 @@ export function AwardsTable() {
             <td className="py-3 px-2 border-r border-[#ddd] bg-white text-left pl-4">
               시카고
             </td>
-            <td className="py-3 px-2 bg-white">3월 23일 결승</td>
+            <td className="py-3 px-2 bg-white whitespace-nowrap">
+              3월 23일 결승
+            </td>
           </tr>
         </tbody>
       </table>
