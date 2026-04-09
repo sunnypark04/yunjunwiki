@@ -158,8 +158,15 @@ export default function YunJunWiki() {
               onToggle={() => toggleSection("s2-1")}
             >
               <p className="mb-4">
-                울산대학교 피아노과에 수석으로 입학하며 일찍이 두각을 나타냈다.
-                이후 미국{" "}
+                <a
+                  href="https://namu.wiki/w/%EC%9A%B8%EC%82%B0%EB%8C%80%ED%95%99%EA%B5%90
+"
+                  className="text-[#0275d8] hover:underline"
+                >
+                  울산대학교
+                </a>{" "}
+                피아노과에 수석으로 입학하며 일찍이 두각을 나타냈다. 한 학기
+                조기졸업을 한 후, 미국{" "}
                 <a
                   href="https://namu.wiki/w/%EC%98%A4%EB%A6%AC%EA%B1%B4%20%EB%8C%80%ED%95%99%EA%B5%90
 "
@@ -167,8 +174,10 @@ export default function YunJunWiki() {
                 >
                   University of Oregon(UO)
                 </a>
-                으로 건너가 Alexandre Dossin 교수 밑에서 박사 과정을 밟고 있다.
-                사실상 교수님의 "애제자" 일 만큼 실력에 기반한 신뢰가 두텁다.
+                으로 건너가
+                <FnLink num={5} /> Alexandre Dossin 교수 밑에서 박사 과정을 밟고
+                있다. 사실상 교수님의 "애제자" 일 만큼 실력에 기반한 신뢰가
+                두텁다.
               </p>
               <p className="mb-4">
                 박사과정 3년 차로 음악분야에 대한 깊은 전공 지식을 보유하고
@@ -195,11 +204,33 @@ export default function YunJunWiki() {
                 에서 northwest division 1위를 차지하고 전국 결승 진출자에 오르는
                 쾌거를 이루었다.
               </p>
-              <p>
+              <p className="mb-4">
                 실 연주 실력은 두말하면 잔소리이고 음악사, 음악이론, 학교 내
                 반주, 교회 반주
-                <FnLink num={4} />, 리사이틀, 콩쿨 등 자신의 커리어를 끊임없이
+                <FnLink num={6} />, 리사이틀, 콩쿨 등 자신의 커리어를 끊임없이
                 차곡차곡 쌓아가는 중이다.
+              </p>
+              <p className="mb-4">
+                2026년 6월에는 교수님 제자들이 한 명당 한 곡씩 연주하는 스튜디오
+                리사이틀이 예정되어 있다. 윤준은{" "}
+                <a
+                  href="https://namu.wiki/w/%EC%95%8C%EB%A0%89%EC%82%B0%EB%93%9C%EB%A5%B4%20%EC%8A%A4%ED%81%AC%EB%9E%B4%EB%B9%88"
+                  className="text-[#0275d8] hover:underline"
+                >
+                  {" "}
+                  스크리아빈(Scriabin)
+                </a>{" "}
+                작곡가의 18분짜리 곡을 연주한다.
+              </p>
+              <p className="mb-4">
+                2026년 가을에 본인 교수님께서 개최하시는 국제 콩쿨에 참여할
+                예정이다. 시카고 대회보다 1티어 높은 콩쿨로 연습이 많이
+                필요하다고 한다.
+              </p>
+              <p>
+                현재는 박사 종합 시험에 준비 중에 있으며, 박사 취득 이후
+                OPT(Optional Practical Training)를 통해 1년여동안 미국 내에서
+                강사 및 반주자로서 커리어를 쌓아갈 예정이다.
               </p>
             </SubSection>
 
@@ -223,7 +254,7 @@ export default function YunJunWiki() {
               </p>
               <p className="mb-4">
                 아기들 사이에서 삼촌역할을 하며 애기들 놀아주기를 맡고 있다
-                <FnLink num={5} />
+                <FnLink num={7} />
               </p>
               <p>
                 신앙심도 투철하여 하나님과 동행하는 삶을 살아가는 중이다. 작년
@@ -241,7 +272,7 @@ export default function YunJunWiki() {
             >
               <p className="mb-4">
                 미술에 대한 깊은 조예
-                <FnLink num={6} />, 꾸준한 런닝으로 다져진 체력을 모두 가지고
+                <FnLink num={8} />, 꾸준한 런닝으로 다져진 체력을 모두 가지고
                 있는, 예체능의 모든 분야를 섭렵한 팔방미인이다. 10키로 이상도
                 5분대 페이스로 거뜬히 뛰는 대단한 런닝 실력을 보유하고 있다. 집
                 주변 아마존파크를 세바퀴씩 뛰며 단련된 체력으로 심지어 20키로
@@ -250,10 +281,27 @@ export default function YunJunWiki() {
                 포기하며 우선순위를 확실히 두는 면모를 보인다.{" "}
               </p>
               <p className="mb-4">
+                본인의 연주 영상 등을 업로드하는 유튜브 채널을 운영 중이며, 주로
+                피아노 연주 영상을 업로드 한다. 특히, ‘쇼팽 에튀드 10-8(햇빛)’
+                <a
+                  href="https://www.youtube.com/watch?v=bL9pSvecw7M
+"
+                  className="text-[#0275d8] hover:underline"
+                >
+                  {" "}
+                  영상
+                </a>
+                이 조회수가 가장 높은데 해당 영상 댓글에서 그의 연주에 대한
+                객관적인 극찬들
+                <FnLink num={9} />을 확인해볼 수 있다. 연주 영상 외에도, 미국
+                유학 초창기에는 미국 여행 및 일상 브이로그도 종종 올리곤 했다.
+              </p>
+              <p className="mb-4">
                 독서를 꾸준한 취미로 삼고 있는데, 작년에는 ‘이방인’을 재밌게
                 읽었다고 한다. 이외에도 참을 수 없는 존재의 가벼움, 인간 실격,
-                변신, 설국 등 굵직한 작품들을 읽고 주변인에게 추천까지 해주며
-                독서광의 면모를 보였다. 여름에 한국에 가면{" "}
+                변신, 설국 등 굵직한 작품들을 읽고 주변인에게 추천
+                <FnLink num={10} />
+                까지 해주며 독서광의 면모를 보였다. 여름에 한국에 가면{" "}
                 <del className="text-gray-400">
                   오늘이 끝인 것처럼 노는 얼라들과는 달리
                 </del>{" "}
@@ -263,12 +311,16 @@ export default function YunJunWiki() {
                 언어를 배우는 것에도 관심이 많아, 2025년에는 JLPT N3 를
                 취득했다. 추후에는 프랑스어와 독일어도 배울 예정이라고 한다.
               </p>
-              <p>
+              <p className="mb-4">
                 여행을 매우 좋아한다. 미국에 5년 거주하며 샌프란시스코, 시애틀,
                 시카고, 플로리다, 뉴욕, 캐나다 등 다수의 지역으로 여행을 다녀온
                 바 있다. 여행 도중 비행기가 취소되는 등 상당한 억까를 겪기도
                 했지만 특유의 차분한 마인드와 노련한 경험으로 능숙하게 극복하는
                 모습이 돋보였다.
+              </p>
+              <p>
+                성경 묵상도 꾸준히 하고 있다. 최근에 시편 통독을 N년만에
+                끝냈다고 한다.
               </p>
             </SubSection>
           </Section>
@@ -295,7 +347,7 @@ export default function YunJunWiki() {
               능숙해 그런지 상당한 느좋남의 분위기를 풍기곤 한다. 특히 그의
               인스타그램 게시물들을 살펴보면 그의 독보적인 미적 감각과 사진
               실력을 엿볼 수 있다. 본인 셀카보단 남찍사
-              <FnLink num={7} />, 풍경 사진이 많은 편이다.{" "}
+              <FnLink num={11} />, 풍경 사진이 많은 편이다.{" "}
             </p>
             <p className="mb-4">
               사실 mz 세대 못지 않은 트렌디함을 갖추면서도 (개인{" "}
@@ -313,8 +365,8 @@ export default function YunJunWiki() {
                 유튜브
               </a>
               도 활발히 하는 중) 하도 놀려대는 어린 친구들의 아재라이팅에 스스로
-              늙은이 취급을 하곤 한다.
-              <FnLink num={8} />
+              늙은이 취급을 하곤 한다. <FnLink num={12} /> 사실 실제로
+              건강관리의 필요성을 느껴 밀크시슬 등 영양제도 잘 챙겨먹고 있다.
             </p>
             <p className="mb-4">
               예중 예고 출신이 아닌 인문계 출신으로 미적분과 확통까지 다 뗐으며
@@ -332,10 +384,12 @@ export default function YunJunWiki() {
               피아노 치는 모습이 정말 압권이다. 적당히 끼부리면서 과하게
               오버액션하지도 않는 절제미 있는 퍼포먼스를 보여준다. 교근에 힘주며
               건반을 내리칠 때 관객의 심장을 함께 내려치는 경향이 있다.
-              <FnLink num={9} /> 작은 음들까지 섬세하게 터치하는 정교한 테크닉을
-              보유했으며 자신이 연주하는 것과는 별개인 티칭도 이해하기 쉽게
-              논리적으로 알려주는 실력자이다.
-              <FnLink num={10} />
+              <FnLink num={13} /> 개인 채널 속 영상들을 보면 섬섬옥수의 손으로
+              섬세하면서 힘있게 치는 연주를 볼 수 있다.
+              <FnLink num={14} /> 작은 음들까지 섬세하게 터치하는 정교한
+              테크닉을 보유했으며 자신이 연주하는 것과는 별개인 티칭도 이해하기
+              쉽게 논리적으로 알려주는 실력자이다.
+              <FnLink num={15} />
             </p>
             <p className="mb-4">
               그러나 정작 본인은 사람들 앞에 서기 싫어하고 무대를 싫어하는 극
@@ -349,15 +403,35 @@ export default function YunJunWiki() {
               유명해지지 않았으면 하는 아티스트 1위로 꼽힌다.
             </p>
             <p>
-              특유의 다정하고 능숙한 성격으로 교제하는 이성도 끊이지 않았다.
-              <FnLink num={11} /> 현재는 연애를 쉬고 있지만 주변에 결혼을 하기
-              시작하는 친구들을 보며 복잡한 감정을 느끼는 듯 하다.
+              특유의 다정하고 능숙한 성격으로 교제하는 이성도 끊이지 않았으며
+              <FnLink num={16} /> 현재는 연애를 쉬고 있지만 주변에 결혼을 하기
+              시작하는 친구들을 보며 복잡한 감정을 느끼는 듯 하다. 연애 시작할
+              때는 상대와의 미래를 그려보곤 하는데, 어느 순간에는 서로의 감정이
+              너무 커져 ‘에라 모르겠다’로 시작하는 경우가 있었다고 한다.
             </p>
           </Section>
 
           <Section
             id="5"
             prefix="5."
+            title="이상형 및 추구미"
+            isOpen={openSections.s5}
+            onToggle={() => toggleSection("s5")}
+          >
+            <p className="mb-4">
+              배우자 이상형은 다음과 같다: 신앙의 결이 맞는 사람, 대화가 잘
+              통하는 사람, 자기 할 일 잘하는 사람
+              <FnLink num={17} />
+            </p>
+            <p>
+              본인이 되고 싶은 배우자 상은 다음과 같다: 기분이 태도가 되지 않고
+              무던하지만, 해야할 때는 할 말 할 수 있는 사람
+            </p>
+          </Section>
+
+          <Section
+            id="6"
+            prefix="6."
             title="논란 및 사건사고"
             isOpen={openSections.s5}
             onToggle={() => toggleSection("s5")}
@@ -369,16 +443,20 @@ export default function YunJunWiki() {
             </p>
             <p className="mb-4">
               감염 증상은 주로 두통 및 흉통으로 나타난다. 특히, 준이를 직접
-              보거나 준이 없이 준이토크를 할 때, 준이 때문에 미치겠는 느낌이 확
+              보거나 환자들끼리 준이토크를 할 때, 준이 때문에 미치겠는 느낌이 확
               오면서 머리가 아프고, 가슴이 답답해진다. 이후, 이성이 흐려져 밤티
               멘트 혹은 행동을 하게 된다.
-              <FnLink num={12} />
+              <FnLink num={18} />
             </p>
             <p className="mb-4">
-              본인 스스로 환자들의 질병 증세를 극대화하는 행동을 하기도 했다.
-              대표적으로 (1) 선이 피아노 레슨 및 라이딩 (2) 상아 스토리 답장 및
-              녹음/영상본 공유 등이 있다.
+              본인 스스로 환자들의 질병 증세를 극대화하는 행동을 하기도 했다.{" "}
+              <del className="text-gray-400">유죄</del> 대표적으로 (1) 선이
+              피아노 레슨 및 라이딩 (2) 상아 스토리 답장 및 본인 영상/사진 공유
+              <FnLink num={19} />
+              등이 있다. 그가 한 유죄멘트
+              <FnLink num={20} />만 모아보면 진짜....
             </p>
+            <p className="mb-4">실형 살아야한다.</p>
             <p>
               윤준의 병크가 터지지 않는 한 후유증 및 재발 가능성은 꾸준히 존재할
               것으로 보인다.
@@ -386,8 +464,8 @@ export default function YunJunWiki() {
           </Section>
 
           <Section
-            id="6"
-            prefix="6."
+            id="7"
+            prefix="7."
             title="여담"
             isOpen={openSections.s6}
             onToggle={() => toggleSection("s6")}
@@ -401,19 +479,8 @@ export default function YunJunWiki() {
             <p className="mb-4">
               딱히 유명교수님께 레슨을 받지도 않고 동네 학원에서 순수 피지컬로
               정시를 뚫은 실력파이다. 수시입시때 학원 선생님과 불미스러운 사건
-              <FnLink num={13} />을 겪고 정시 입시 준비 기간 3개월동안 매일
-              9시간씩 연습했다고 한다. 입시곡 중 하나인 쇼팽 에튀드 10-8 햇빛은
-              윤준의
-              <a
-                href="https://www.youtube.com/watch?v=bL9pSvecw7M
-"
-                className="text-[#0275d8] hover:underline"
-              >
-                {" "}
-                유튜브
-              </a>
-              에도 업로드되어있는데 객관적으로 뛰어난 연주실력에 조회수가 거의
-              10만을 앞두고 있을 지경이다
+              <FnLink num={21} />을 겪고 정시 입시 준비 기간 3개월동안 매일
+              9시간씩 연습했다고 한다.
             </p>
             <p className="mb-4">
               제일 좋아하는 아티스트는{" "}
@@ -443,13 +510,15 @@ export default function YunJunWiki() {
               불리곤 했었다.
             </p>
             <p className="mb-4">
-              놀이기구를 상당히 못타는 편이라고 한다. <FnLink num={14} />
+              놀이기구를 상당히 못타는 편이라고 한다. <FnLink num={22} />
             </p>
             <p className="mb-4">
               은근 잘 먹는다. 근데 음식의 기쁨은 많이 느끼지 않는 편. 살기 위해
               먹는편이라고 한다. 그러나 그런 것 치고 meal plan을 별도로 결제하여
               carson hall dining을 아주 애용하곤 한다. 그런데도 살이 안찌는 걸
-              보면 대단한 기초대사량을 가지고 있을 것으로 예상된다.
+              보면 대단한 기초대사량을 가지고 있을 것으로 예상된다.좋아하는
+              음식으로는 햄버거, 피자 등이 있다.{" "}
+              <del className="text-gray-400">초딩입맛</del>{" "}
             </p>
             <p>전화보단 문자가 편한 편이다</p>
           </Section>

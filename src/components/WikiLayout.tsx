@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { footnoteData } from "../data/footnotes";
 
 export function Section({
   id,
@@ -107,15 +108,29 @@ export function FnItem({
 }
 
 export function FnLink({ num }: { num: number }) {
+  const footnote = footnoteData.find((fn: any) => fn.id === num);
+
   return (
-    <sup className="text-[11px] ml-[0.5px] align-super">
+    <sup className="relative inline-block group text-[11px] ml-[0.5px] align-super">
       <a
         href={`#fn-${num}`}
         id={`fn-ref-${num}`}
-        className="text-[#0275d8] hover:underline"
+        className="text-[#0275d8] hover:underline cursor-pointer"
       >
         [{num}]
       </a>
+
+      {/* 👇 div를 span으로 변경했습니다! */}
+      {footnote && (
+        <span className="absolute bottom-[140%] left-1/2 -translate-x-1/2 mb-1 w-max max-w-[280px] bg-white border border-[#ccc] shadow-md p-2.5 rounded-sm text-[13px] text-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 text-left pointer-events-none leading-relaxed font-sans whitespace-normal font-normal">
+          <span className="text-[#0275d8] mr-1">[{num}]</span>
+          {footnote.text}
+
+          {/* 말풍선 꼬리들도 div에서 span으로 변경! */}
+          <span className="absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-[#ccc]"></span>
+          <span className="absolute top-[calc(100%-1.5px)] left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-white"></span>
+        </span>
+      )}
     </sup>
   );
 }

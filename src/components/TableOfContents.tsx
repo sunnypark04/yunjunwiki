@@ -46,11 +46,16 @@ export default function TableOfContents() {
         </li>
         <li>
           <a href="#5" className="hover:underline">
-            논란 및 사건사고
+            이상형 및 추구미
           </a>
         </li>
         <li>
           <a href="#6" className="hover:underline">
+            논란 및 사건사고
+          </a>
+        </li>
+        <li>
+          <a href="#7" className="hover:underline">
             여담
           </a>
         </li>

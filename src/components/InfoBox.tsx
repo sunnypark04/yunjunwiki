@@ -50,7 +50,12 @@ export default function InfoBox() {
           />
           <InfoRow
             label="가족관계"
-            value="부모님, 여동생 두명: 윤다영(1999년생), 윤예영(2002년생)"
+            value={
+              <>
+                부모님, 여동생 두명: 윤다영(1999년생), 윤예영(2002년생)
+                <FnLink num={3} />
+              </>
+            }
           />
           <InfoRow label="종교" value="개신교" />
           <InfoRow
@@ -58,7 +63,7 @@ export default function InfoBox() {
             value={
               <>
                 은비, 커피
-                <FnLink num={3} />
+                <FnLink num={4} />
               </>
             }
           />
