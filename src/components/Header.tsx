@@ -16,7 +16,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-2 md:px-4 h-12 flex items-center justify-between text-white font-sans text-[13px]">
         {/* 왼쪽: 로고 및 메인 메뉴 */}
         <div className="flex items-center gap-3 md:gap-5 overflow-hidden">
-          {/* 🔥 윤준위키 로고 (모바일에서 절대 안 깨지게 shrink-0, whitespace-nowrap 추가) */}
+          {/*  윤준위키 로고 (모바일에서 절대 안 깨지게 shrink-0, whitespace-nowrap 추가) */}
           <Link
             href="/"
             className="flex items-center gap-1 hover:opacity-80 transition-opacity shrink-0"

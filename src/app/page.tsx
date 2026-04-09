@@ -6,7 +6,7 @@ import AwardsTable from "../components/AwardsTable";
 import InfoBox from "../components/InfoBox";
 import TableOfContents from "../components/TableOfContents";
 import { Section, SubSection, FnItem, FnLink } from "../components/WikiLayout"; // FnLink 추가 확인
-import { footnoteData } from "../data/footnotes"; // 👈 이 경로가 맞는지 꼭 확인!
+import { footnoteData } from "../data/footnotes";
 export default function YunJunWiki() {
   const [openSections, setOpenSections] = useState({
     s1: true,
@@ -32,7 +32,8 @@ export default function YunJunWiki() {
     <div className="min-h-screen bg-[#f5f5f5] font-sans text-[#373a3c]">
       <Header />
 
-      <main className="max-w-[1200px] mx-auto bg-white min-h-screen shadow-sm p-4 md:p-8 my-0 md:my-4 border-x border-[#ddd]">
+      {/* 👇 w-full 과 overflow-x-hidden 을 추가했습니다! */}
+      <main className="max-w-[1200px] w-full overflow-x-hidden mx-auto bg-white min-h-screen shadow-sm p-4 md:p-8 my-0 md:my-4 border-x border-[#ddd]">
         {/* 분류 섹션 */}
         <div className="border border-[#ddd] p-2 mb-4 bg-[#f5f5f5] text-[13px] flex flex-wrap gap-x-2 gap-y-1">
           <span className="font-bold">분류:</span>
