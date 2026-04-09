@@ -33,7 +33,7 @@ export default function YunJunWiki() {
       <Header />
 
       {/* 👇 w-full 과 overflow-x-hidden 을 추가했습니다! */}
-      <main className="max-w-[1200px] w-full overflow-x-hidden mx-auto bg-white min-h-screen shadow-sm p-4 md:p-8 my-0 md:my-4 border-x border-[#ddd]">
+      <main className="max-w-[1200px] w-full mx-auto bg-white min-h-screen shadow-sm p-4 md:p-8 my-0 md:my-4 border-x border-[#ddd]">
         {/* 분류 섹션 */}
         <div className="border border-[#ddd] p-2 mb-4 bg-[#f5f5f5] text-[13px] flex flex-wrap gap-x-2 gap-y-1">
           <span className="font-bold">분류:</span>
