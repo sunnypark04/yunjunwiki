@@ -9,9 +9,11 @@ const RecitalPhotoOnly = ({ src, alt }: { src: string; alt: string }) => (
 export function AwardsTable() {
   return (
     <div className="overflow-x-auto mt-2">
-      <table className="w-full text-[13.5px] border-collapse border-t-[3px] border-[#82b5df] border-b-[3px] border-[#ccc]">
+      {/*  상단 테두리 색상을 헤더와 동일한 #00a495로 변경 */}
+      <table className="w-full text-[13.5px] border-collapse border-t-[3px] border-[#00a495] border-b-[3px] border-[#ccc]">
         <thead>
-          <tr className="bg-[#82b5df] text-white">
+          {/*  헤더 배경색을 #00a495로 완벽 일치 */}
+          <tr className="bg-[#00a495] text-white">
             <th className="py-2.5 px-3 border-r border-white/30 font-bold whitespace-nowrap w-[12%]">
               연도
             </th>
@@ -26,10 +28,11 @@ export function AwardsTable() {
         </thead>
         <tbody className="text-center text-gray-800">
           {/* 학부 시절 */}
-          <tr className="bg-[#f0f5fa]">
+          {/* 🌟 연도 구분선 배경색과 글자색도 #00a495 톤에 맞춰 조정 */}
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               학부 시절
             </td>
@@ -68,10 +71,10 @@ export function AwardsTable() {
           </tr>
 
           {/* 2020년 */}
-          <tr className="bg-[#f0f5fa]">
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               2020년
             </td>
@@ -90,10 +93,10 @@ export function AwardsTable() {
           </tr>
 
           {/* 2021년 */}
-          <tr className="bg-[#f0f5fa]">
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               2021년
             </td>
@@ -112,10 +115,10 @@ export function AwardsTable() {
           </tr>
 
           {/* 2022년 */}
-          <tr className="bg-[#f0f5fa]">
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               2022년
             </td>
@@ -166,10 +169,10 @@ export function AwardsTable() {
           </tr>
 
           {/* 2023년 */}
-          <tr className="bg-[#f0f5fa]">
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               2023년
             </td>
@@ -183,7 +186,6 @@ export function AwardsTable() {
               <div className="text-[12px] font-normal text-gray-500 mb-2">
                 윤준 피아노 독주회
               </div>
-              {/* 🌟 2023년 사진 추가 (캡션 삭제) */}
               <RecitalPhotoOnly src="/image_0.png" alt="2023년 독주회 포스터" />
             </td>
             <td className="py-3 px-2 border-r border-[#ddd] bg-white text-left pl-4 text-[12px] leading-relaxed text-gray-700">
@@ -202,10 +204,10 @@ export function AwardsTable() {
           </tr>
 
           {/* 석사 재학 중 */}
-          <tr className="bg-[#f0f5fa]">
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               석사 재학 중
             </td>
@@ -234,10 +236,10 @@ export function AwardsTable() {
           </tr>
 
           {/* 2025년 */}
-          <tr className="bg-[#f0f5fa]">
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               2025년
             </td>
@@ -251,7 +253,6 @@ export function AwardsTable() {
               <div className="text-[11px] text-gray-500 mt-1 mb-2">
                 Jun Yun, Piano
               </div>
-              {/* 🌟 2025년 사진 추가 (캡션 삭제) */}
               <RecitalPhotoOnly
                 src="/image_1.png"
                 alt="2025년 DMA 리사이틀 프로그램 사진"
@@ -272,10 +273,10 @@ export function AwardsTable() {
           </tr>
 
           {/* 2026년 */}
-          <tr className="bg-[#f0f5fa]">
+          <tr className="bg-[#edf7f6]">
             <td
               colSpan={4}
-              className="py-1.5 font-bold text-[#6297ce] border-y border-[#ddd]"
+              className="py-1.5 font-bold text-[#008a7d] border-y border-[#ddd]"
             >
               2026년
             </td>
