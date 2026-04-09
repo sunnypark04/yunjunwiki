@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-// 나무위키 아이콘과 비슷한 아이콘들을 불러옵니다.
 import {
   FiEdit2,
   FiMessageSquare,
@@ -17,20 +16,19 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between text-white font-sans text-[13px]">
         {/* 왼쪽: 로고 및 메인 메뉴 */}
         <div className="flex items-center gap-5">
-          {/* 로고 영역 (이미지의 로고 모양을 텍스트로 흉내낸 것입니다.) */}
-          <div className="flex items-center gap-1 cursor-pointer">
-            {/* 실제 로고 이미지가 있다면 <img src="/logo.png" /> 로 대체 가능 */}
+          {" "}
+          <Link
+            href="/"
+            className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+          >
             <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center font-bold text-xs">
               🎹
             </div>
             <span className="text-xl font-bold tracking-tight">윤준위키</span>
-          </div>
-
+          </Link>
           {/* 메뉴 아이템들 */}
           <div className="hidden md:flex items-center gap-5 text-gray-100">
             <MenuLink icon={FiEdit2} label="최근 변경" />
-
-            {/* 🌟 최근 토론 부분에 Link를 감싸서 /discuss 페이지로 연결되게 합니다! */}
             <Link
               href="/discuss"
               className="hover:opacity-80 transition-opacity"

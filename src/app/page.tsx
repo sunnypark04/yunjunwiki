@@ -7,7 +7,6 @@ import InfoBox from "../components/InfoBox";
 import TableOfContents from "../components/TableOfContents";
 import { Section, SubSection, FnItem, FnLink } from "../components/WikiLayout"; // FnLink 추가 확인
 import { footnoteData } from "../data/footnotes"; // 👈 이 경로가 맞는지 꼭 확인!
-
 export default function YunJunWiki() {
   const [openSections, setOpenSections] = useState({
     s1: true,
@@ -17,6 +16,9 @@ export default function YunJunWiki() {
     s5: true,
     s6: true,
     s7: true,
+    "s2-1": true,
+    "s2-2": true,
+    "s2-3": true,
   });
 
   const toggleSection = (id: string) => {
@@ -148,7 +150,13 @@ export default function YunJunWiki() {
             isOpen={openSections.s2}
             onToggle={() => toggleSection("s2")}
           >
-            <SubSection id="2.1" prefix="2.1." title="학문적 행보">
+            <SubSection
+              id="2.1"
+              prefix="2.1."
+              title="학문적 행보"
+              isOpen={openSections["s2-1"]}
+              onToggle={() => toggleSection("s2-1")}
+            >
               <p className="mb-4">
                 울산대학교 피아노과에 수석으로 입학하며 일찍이 두각을 나타냈다.
                 이후 미국{" "}
@@ -195,7 +203,13 @@ export default function YunJunWiki() {
               </p>
             </SubSection>
 
-            <SubSection id="2.2" prefix="2.2." title="교회 생활">
+            <SubSection
+              id="2.2"
+              prefix="2.2."
+              title="교회 생활"
+              isOpen={openSections["s2-2"]}
+              onToggle={() => toggleSection("s2-2")}
+            >
               <p className="mb-4">
                 <a
                   href="https://eugenechurch.org/
@@ -218,7 +232,13 @@ export default function YunJunWiki() {
               </p>
             </SubSection>
 
-            <SubSection id="2.3" prefix="2.3." title="취미 활동">
+            <SubSection
+              id="2.3"
+              prefix="2.3."
+              title="취미 활동"
+              isOpen={openSections["s2-3"]}
+              onToggle={() => toggleSection("s2-3")}
+            >
               <p className="mb-4">
                 미술에 대한 깊은 조예
                 <FnLink num={6} />, 꾸준한 런닝으로 다져진 체력을 모두 가지고

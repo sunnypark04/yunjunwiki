@@ -32,19 +32,37 @@ export function Section({
   );
 }
 
-export function SubSection({ id, prefix, title, children }: any) {
+export function SubSection({
+  id,
+  prefix,
+  title,
+  children,
+  isOpen,
+  onToggle,
+}: any) {
   return (
     <div id={id} className="mt-8 mb-4">
-      <div className="flex justify-between items-center border-b border-[#ccc] mb-4 pb-1 group px-1">
+      <div
+        className="flex justify-between items-center border-b border-[#ccc] mb-4 pb-1 group px-1 cursor-pointer hover:bg-gray-50"
+        onClick={onToggle}
+      >
         <h3 className="text-[18px] font-bold text-black flex items-center">
-          <span className="mr-2 text-gray-400">⌵</span>
+          <span
+            className={`mr-2 text-gray-400 transition-transform duration-200 ${isOpen ? "rotate-0" : "-rotate-90"}`}
+          >
+            ⌵
+          </span>
           <span className="text-[#0275d8] mr-1.5">{prefix}</span> {title}
         </h3>
-        <span className="text-[11px] text-[#0275d8] opacity-0 group-hover:opacity-100 cursor-pointer">
+        <span className="text-[11px] text-[#0275d8] opacity-0 group-hover:opacity-100">
           [편집]
         </span>
       </div>
-      <div className="text-gray-800 leading-relaxed px-1">{children}</div>
+      {isOpen && (
+        <div className="text-gray-800 leading-relaxed px-1 animate-fadeIn">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
@@ -56,7 +74,6 @@ export function InfoRow({
   label: string;
   value: React.ReactNode;
 }) {
-  // 👈 string에서 React.ReactNode로 변경
   return (
     <tr className="border-b border-[#ddd]">
       <th className="bg-[#00a495] text-white w-[100px] py-3 px-3 text-[11px] font-bold text-center align-middle whitespace-nowrap">
