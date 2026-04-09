@@ -111,7 +111,7 @@ export function FnLink({ num }: { num: number }) {
   const footnote = footnoteData.find((fn: any) => fn.id === num);
 
   return (
-    <sup className="relative inline-block group text-[11px] ml-[0.5px] align-super z-10 hover:z-[999]">
+    <sup className="relative inline-block group text-[11px] ml-[0.5px] align-super hover:z-[999]">
       <a
         href={`#fn-${num}`}
         id={`fn-ref-${num}`}

@@ -3,7 +3,8 @@ import { InfoRow, FnLink } from "./WikiLayout";
 
 export default function InfoBox() {
   return (
-    <aside className="w-full md:w-[400px] shrink-0 border border-[#00a495] overflow-hidden shadow-sm bg-white text-[13px]">
+    <aside className="w-full md:w-[400px] shrink-0 border border-[#00a495] shadow-sm bg-white text-[13px]">
+      {" "}
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-[#00a495] text-white text-center">
